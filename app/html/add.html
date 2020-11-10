@@ -1,0 +1,58 @@
+
+<div class="add_page">
+
+    
+
+    <div class="header_section">
+
+        <div class="back"
+            onclick="void(0)"
+            ng-click="GoToState('search')">
+            <img src="img/back_button_128.png">
+       </div>
+
+        <div class="title">
+            ACRONYMS
+        </div>
+    </div>
+
+    
+
+
+   <div class="input_section">
+        <div class="label inline_this">
+            <label for="search">
+                Add:
+            </label>
+        </div>
+
+        <div class="input inline_this">
+            <input id="search"
+                    ng-model="add.Acronym"
+                    placeholder="acronym"
+                    autofocus>
+
+            <input id="meaning"
+                    ng-model="add.Meaning"
+                    placeholder="meaning" />
+
+            <input id="contributor"
+                    ng-model="add.Contributor"
+                    placeholder="contributor (optional)" />
+
+            <div class="displaying">
+                {{add.Acronym}} - {{add.Meaning}}
+            </div>
+        </div>
+    </div>
+
+    <div class='send'>
+        <button ng-show="add.Acronym && add.Meaning"
+                ng-click="UploadThis(add)">
+            SEND
+        </button>
+    </div>
+    
+
+
+</div>

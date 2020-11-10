@@ -1,0 +1,59 @@
+
+<div class="search_page">
+
+    <div class="header_section">
+
+        <div class="back">
+        </div>
+
+        <div class="title">
+            ACRONYMS
+        </div>
+
+        <div class="add" 
+            onclick="void(0)"
+            ng-click="GoToState('add')">
+            <img src="img/add_button_128.png">     
+        </div>
+    </div>
+
+    <div class="confirmation_section"
+         ng-show=appData.confirmation>
+        Thank you for the contribution! <br>
+        Your acronym will appear in the list <br>
+        once it's approved by admin.
+    </div>
+
+    <div class="input_section">
+        <div class="label inline_this">
+            <label for="search">
+                Search:
+            </label>
+        </div>
+        <div class="input inline_this">
+            <input id="search"
+                    ng-model="search.Acronym"
+                    ng-change="appData.confirmation=false"
+                    placeholder="acronym"
+                    autofocus>
+
+            <!-- <div class="displaying" ng-show="(appData.data_all|filter:search).length < appData.data_all.length">-->
+            <div class="displaying">
+                Displaying {{ (appData.data_all|filter:search).length }}
+                of {{ appData.data_all.length }} results
+            </div>
+        </div>
+    </div>
+
+	<div class="results_section">
+        <!--<ul ng-if="(appData.data_all|filter:search).length < appData.data_all.length">-->
+        <ul>
+			<li ng-repeat="acro in appData.data_all | filter:search">
+				{{acro.Acronym}} - {{acro.Meaning}} <em ng-if="acro.Type!=''">({{acro.Type}})</em>
+			</li>
+		</ul>
+    </div>
+    
+
+
+</div>

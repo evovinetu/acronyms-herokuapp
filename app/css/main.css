@@ -1,0 +1,162 @@
+
+@media (min-width: 500px) {
+    /* displays with min 500px */
+	
+	.display {
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .back {
+        display: inline-block;
+        width: 95px;
+        position: relative;
+        left: 24px;
+        top: 1px;
+    }
+    .title {
+        display: inline-block;
+        width: 300px;
+    }
+    .add {
+        display: inline-block;
+        width: 90px;
+        text-align: right;
+        position: relative;
+        right: 21px;
+        top: 5px;
+    }
+}
+
+@media (max-width: 499px) {
+    /* displays with max 499px */
+    .add {
+        position: absolute;
+        top: 20px;
+        right: 23px;
+    }
+    .back {
+        position: absolute;
+        top: 23px;
+        left: 23px;
+    }
+  }
+
+@font-face {
+    font-family: 'Candara';
+    src: url('fonts/Candara.eot');
+    src: 
+    url('fonts/Candara.woff') format('woff'),
+    url('fonts/Candara.otf') format('opentype'),
+    url('fonts/Candara.ttf') format('truetype'),
+    url("fonts/Candara.svg#filename") format("svg");
+}
+
+body {
+    font-family: "Candara", Arial, sans-serif;
+    font-size: 20px;
+	/* background-color: lightgray; */
+}
+
+.display {
+	/* background-color: grey; */
+}
+
+ul {
+	padding-inline-start: 18px;
+	line-height: 2;
+}
+
+.inline_this {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.header_section {
+    background-color: lightskyblue;
+}
+
+.title { 
+    font-family: "Candara", Arial, sans-serif;
+    font-size: 40px;
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+	
+}
+
+/* search page */
+
+.confirmation_section {
+    margin-top: 25px;
+    text-align: center;
+    color: lightskyblue;
+    font-style: italic;
+}
+
+.input_section {
+    margin: 25px; 
+}
+
+.results_section {
+	margin: 25px;
+}
+
+
+
+.label {
+    margin: 5px 10px 0px 0px;
+}
+
+#search {
+    width: 75px;
+    /* border-style: solid;
+    border-color: gray;
+    border-width: 1px; */
+}
+#meaning, #contributor {
+    width: 200px;
+    display: block;
+	margin-top: 10px;
+}
+
+.displaying {
+    font-size: 12px;
+    font-style: italic;
+    margin-top: 15px;
+}
+
+
+.add img {
+    height: 34px;
+    border-radius: 17px;
+}
+.back img {
+    height: 29px;
+    border-radius: 17px;
+}
+
+.send {
+    margin: 20px;
+	text-align: center;
+}
+.send button {
+    width: 90px;
+    height: 30px;
+    font-size: 14px;
+    background-color: lightskyblue;
+    border-color:   black;
+    border-width: 0px;
+    border-radius: 15px;
+}
+
+.add img:hover, .add img:focus,
+.back img:hover, .back img:focus,
+.send button:hover, .send button:focus {
+    background-color: dodgerblue;
+}
+.add img:active,
+.back img:active,
+.send button:active {
+    box-shadow: 0px 0px 5px black;
+}
