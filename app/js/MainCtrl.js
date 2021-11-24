@@ -71,8 +71,8 @@
         };
 
         $scope.DownloadCSV = function(){
-            var csv = Papa.unparse($scope.final_array);
-            console.log($scope.final_array);
+            var csv = Papa.unparse($scope.appData.data_all);
+            //console.log($scope.final_array);
             console.log(csv);
             var csvData = new Blob([csv], {type: 'text/csv;charset=utf-8;'});
             var csvURL =  null;
@@ -83,7 +83,7 @@
             }
             var tempLink = document.createElement('a');
             tempLink.href = csvURL;
-            tempLink.setAttribute('download', 'download.csv');
+            tempLink.setAttribute('download', 'acronyms.csv');
             tempLink.click();
         }
     });
