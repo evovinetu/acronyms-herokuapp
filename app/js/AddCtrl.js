@@ -32,7 +32,7 @@
             $scope.appData.data_all.push(add);
 
             // sort array
-            $scope.appData.sort((a, b) => a.Acronym.localeCompare(b.Acronym));
+            //$scope.appData.sort((a, b) => a.Acronym.localeCompare(b.Acronym));
 
             // in the search page, show the confirmation
             $scope.appData['confirmation'] = true;

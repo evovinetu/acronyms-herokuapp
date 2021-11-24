@@ -51,7 +51,7 @@
 	<div class="results_section">
         <!--<ul ng-if="(appData.data_all|filter:search).length < appData.data_all.length">-->
         <ul>
-			<li ng-repeat="acro in appData.data_all | filter:search">
+			<li ng-repeat="acro in appData.data_all | filter:search | orderBy: 'Acronym'">
 				{{acro.Acronym}} - {{acro.Meaning}} <em ng-if="acro.Type!=''">({{acro.Type}})</em>
 			</li>
 		</ul>
