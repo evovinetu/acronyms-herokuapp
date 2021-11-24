@@ -28,7 +28,11 @@
             // TODO: upload the new data to the database
             console.log(add);
 
+            // add to array
             $scope.appData.data_all.push(add);
+
+            // sort array
+            $scope.appData.sort((a, b) => a.Acronym.localeCompare(b.Acronym));
 
             // in the search page, show the confirmation
             $scope.appData['confirmation'] = true;

@@ -70,6 +70,22 @@
             console.log('MainCtrl Scope:',$scope);
         };
 
+        $scope.DownloadCSV = function(){
+            var csv = Papa.unparse($scope.final_array);
+            console.log($scope.final_array);
+            console.log(csv);
+            var csvData = new Blob([csv], {type: 'text/csv;charset=utf-8;'});
+            var csvURL =  null;
+            if (navigator.msSaveBlob) {
+                csvURL = navigator.msSaveBlob(csvData, 'download.csv');
+            } else {
+                csvURL = window.URL.createObjectURL(csvData);
+            }
+            var tempLink = document.createElement('a');
+            tempLink.href = csvURL;
+            tempLink.setAttribute('download', 'download.csv');
+            tempLink.click();
+        }
     });
 
 }());
