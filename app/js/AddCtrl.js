@@ -28,7 +28,7 @@
             // TODO: upload the new data to the database
             console.log(add);
 
-            appData.data_all.push(add);
+            $scope.appData.data_all.push(add);
 
             // in the search page, show the confirmation
             $scope.appData['confirmation'] = true;
